@@ -1,0 +1,5 @@
+# Google Natural Questions: Question-Answering System
+### John Bica | Geoff Korb | Hannah Stoik
+
+## Summary
+An open-domain question answering (QA) system takes a natural language questions, such as “Who is the lead singer of Vampire Weekend?”, rather than a set of keywords, such as “Vampire Weekend lead singer”. The returned answer is in the form of short texts, such as “Ezra Koenig”, rather than as a list of relevant documents, like a classic web browser provides. Improved question answering systems will make the search for answers faster and more accurate, which can have a multitude of benefits, from the student who can find information more quickly, to the inexperienced user who can find information at all. To help spur research advances in QA, Google built Natural Questions (NQ), a new, large-scale corpus for training and evaluating open-domain question answering systems, and the first to replicate the end-to-end process in which people find answers to questions. Our intent is to build a system and submit it for evaluation.
