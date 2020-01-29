@@ -30,12 +30,12 @@ By the end of the semester, we hope to build a model that exceeds the performanc
 ## Preliminary Results
 The dataset includes 307,373 training examples, 7,830 development examples and 7,824 testing examples. Of the 307,373 training examples, not all of them include a long answer, an intentional aspect of the dataset meant to train models that can determine not only where the long answer is, but if a long exists at all. Table 1 shows the distribution of answers within the training dataset. 
 
-![Table 1.](https://imgur.com/SycJkLP)
+![Table 1.](imgs/data-distribution.jpg)
 *Table 1. Distribution of answers in training dataset.*
 
 Each long answer is an HTML bounding box on the Wikipedia page corresponding to the given question. This long answer can be in a variety of HTML formats and the distribution is shown in Table 2. 
 
-![Table 2.](https://imgur.com/I3qAlep)
+![Table 2.](imgs/html-distribution.jpg)
 *Table 2. Distribution of long answers in HTML.*
 
 
