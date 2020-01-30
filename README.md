@@ -15,7 +15,7 @@ This project will occur throughout the course of the entire semester. It will be
 ### Stage One
 The first task to complete will be a review and update of the provided code. Through the Google Natural Questions GitHub, code has been provided on how to get started with the dataset. 
 
-The data is provided in a form where each training example containing four main items: question, corresponding Wikipedia page, long answer candidate(s), and annotation [3]. The annotation will include both the correct (or chosen) long answer as well as potential short answers (or NULL if not applicable). We will use the tokenized representation of the training examples which will allow for easy use of parsing
+The data is provided in a form where each training example containing four main items: question, corresponding Wikipedia page, long answer candidate(s), and annotation [3]. The annotation will include both the correct (or chosen) long answer as well as potential short answers (or NULL if not applicable). We will use the tokenized representation of the training examples which will allow for easy feeding into the models described below.
 
 For pre-processing, we will attempt to optimize for our training model by first paring down our long answer candidates using TF-IDF (term frequency - inverse document frequency) which is information retrieval scoring measure that helps determine how relevant a term is in a given document. Once that is done, we can extract key dimensions in the data and feeding multiple training instances into BERT using a sliding window technique on the text as the BERT requires a specified maximum sequence length, meaning some texts might be too long to fit into one single training instance. 
 
