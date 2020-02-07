@@ -2,3 +2,5 @@ venv/
 .idea/
 .ipynb_checkpoints/
 __pycache__/
+data/
+requirements.txt
