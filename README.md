@@ -16,7 +16,9 @@ In Phase One, the primary goal was to reproduce and run the BERT pre-trained bas
 
 Initial progress of the project included preprocessing a subsample of the development set data, which includes simplifying the data to keep only needed input for model, tokenizing it, and generating multiple instances of each example to feed into the BERTjoint model (this pre-processing flow is shown in Figure 1 below). Inference was drawn and predictions were computed by running the pre-processed data on the model in Google Colabatory.
 
-*******INSERT GRAPHIC HERE*********
+![Table 1.](imgs/Table 1 -Hyperparameter Descriptions.png)
+
+*Table 1. Hyperparameter Descriptions.*
 
 Going forward, inference will be drawn on the full development set in Google Cloud Platform (GCP) to allow us to compare our prediction scores more accurately and take advantage of GPU access which was a challenge to get working during Phase One. Once working on GCP,  the model will be packaged up in a Docker container and submitted to the Google Challenge for official scores on testing data. Those scores will be assessed and we will begin to train our model on the Google NQ Dataset as well as begin fine-tuning the model through hyperparameter optimization and other sampling techniques described further below in our proposed plan of research.
 
@@ -61,11 +63,7 @@ C. Sample of 5-Way Annotated Development Data
 D. Results for Bertjoint Pre-trained Model
    ***INSERT Results Images / Tables****
    
-![Table 1.](imgs/data-distribution.JPG)
 
-*Table 1. Distribution of answers in training dataset.*
-
-Each long answer is an HTML bounding box on the Wikipedia page corresponding to the given question. This long answer can be in a variety of HTML formats and the distribution is shown in Table 2. 
 
 ![Table 2.](imgs/html-distribution.JPG)
 
