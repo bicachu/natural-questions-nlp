@@ -66,7 +66,12 @@ C. Sample of 5-Way Annotated Development Data
 ![Appendix C.](img/C_Sample_5_Way_Annotated_Development_Data.png)
 
 D. Results for Bertjoint Pre-trained Model
-   ***INSERT Results Images / Tables****
+
+![Appendix D.](img/D_Results_Bertjoint Pre_trained_Model_1.png)
+![Appendix D.](img/D_Results_Bertjoint Pre_trained_Model_2.png)
+
+*Table 1. Long answer evaluation.*
+
    
 
 
