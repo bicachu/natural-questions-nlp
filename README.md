@@ -68,14 +68,3 @@ C. Sample of 5-Way Annotated Development Data
 D. Results for Bertjoint Pre-trained Model
 
 ![Appendix D.](img/D_Results_Bertjoint Pre_trained_Model_1.png)
-
-
-   
-
-
-![Table 2.](imgs/html-distribution.JPG)
-
-*Table 2. Distribution of long answers in HTML.*
-
-
-
