@@ -71,4 +71,9 @@ D. Results for BERTjoint Pre-trained Model
 ![Appendix D.](img/D_Results_Bertjoint_Pre_trained_Model_2.png)
 *Table 1. Long answer evaluation.*
 
+![Appendix D.](img/D_Results_Bertjoint_Pre_trained_Model_3.png)
+![Appendix D.](img/D_Results_Bertjoint_Pre_trained_Model_4.png)
+*Table 2. Short answer evaluation.*
+
+
 
