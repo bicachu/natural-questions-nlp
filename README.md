@@ -16,7 +16,7 @@ In Phase One, the primary goal was to reproduce and run the BERT pre-trained bas
 
 Initial progress of the project included preprocessing a subsample of the development set data, which includes simplifying the data to keep only needed input for model, tokenizing it, and generating multiple instances of each example to feed into the BERTjoint model (this pre-processing flow is shown in Figure 1 below). Inference was drawn and predictions were computed by running the pre-processed data on the model in Google Colabatory.
 
-![Table 1.](imgs/Table 1 -Hyperparameter Descriptions.png)
+![Table 1.](img/Table1_Hyperparameter_Descriptions.png)
 
 *Table 1. Hyperparameter Descriptions.*
 
