@@ -16,9 +16,9 @@ In Phase One, the primary goal was to reproduce and run the BERT pre-trained bas
 
 Initial progress of the project included preprocessing a subsample of the development set data, which includes simplifying the data to keep only needed input for model, tokenizing it, and generating multiple instances of each example to feed into the BERTjoint model (this pre-processing flow is shown in Figure 1 below). Inference was drawn and predictions were computed by running the pre-processed data on the model in Google Colabatory.
 
-![Table 1.](img/Table1_Hyperparameter_Descriptions.png)
+![Figure 1.](img/Figure1_Pre_processing_Development_Set.png)
 
-*Table 1. Hyperparameter Descriptions.*
+*Figure 1. Pre-processing of Development Set.*
 
 Going forward, inference will be drawn on the full development set in Google Cloud Platform (GCP) to allow us to compare our prediction scores more accurately and take advantage of GPU access which was a challenge to get working during Phase One. Once working on GCP,  the model will be packaged up in a Docker container and submitted to the Google Challenge for official scores on testing data. Those scores will be assessed and we will begin to train our model on the Google NQ Dataset as well as begin fine-tuning the model through hyperparameter optimization and other sampling techniques described further below in our proposed plan of research.
 
@@ -27,6 +27,10 @@ Going forward, inference will be drawn on the full development set in Google Clo
 We plan to build a model that exceeds the performance of the BERTjoint model and demonstrate that by submitting the newly improved model to the Google Natural Questions competition. 
 
 As mentioned in the Summary, there are several areas of possible improvement we plan to explore. TF-IDF (term frequency - inverse document frequency) is an information retrieval scoring measure that helps determine how relevant a term is in a given document; it could improve model performance by paring down our long answer candidates, making training more effective. Re-configuring the sampling approach is another potential avenue to improvement, because it could address the data imbalance in the development set, and put it in line with the training set at 50/50 long and short answers. For instance, we can look to increase the null answers to long answers ratio in development dataset or to improve the quality of the samples in training using a stricter negative-sampling strategy. A negative sampling strategy can allow for a better and more robust model that better predicts answers and avoids overfitting to a training set that by default does a very good job of learning basic patterns and predicting the negative candidates too easily. Furthermore, BERT requires a specified maximum sequence length, meaning some texts might be too long to fit into one single training instance, and this is a hyperparameter we could tune.
+
+![Table 1.](img/Table1_Hyperparameter_Descriptions.png)
+
+*Table 1. Hyperparameter Descriptions.*
 
 Another area of growing understanding and necessity is Docker, because submission to the competition requires creation of a Docker image. Docker offers encapsulation, isolation, portability, and control over an application and its dependencies. Also, Docker containers are small (megabytes) and they can be easily shared via the public Docker Hub or another public/private repository. Docker will be a valuable tool to learn. Finally, we hope to build a simple web-app or user interface, allowing a user to post a query and select a Wikipedia page and receive the best long and short answer provided by the model we develop.
 
