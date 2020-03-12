@@ -64,7 +64,6 @@ https://github.com/google-research/language/tree/master/language/question_answer
 C. Sample of 5-Way Annotated Development Data
 
 ![Appendix C.](img/C_Sample_5_Way_Annotated_Development_Data.png)
-*Appendix C. Sample of 5-Way Annotated Development Data.*
 
 D. Results for Bertjoint Pre-trained Model
    ***INSERT Results Images / Tables****
