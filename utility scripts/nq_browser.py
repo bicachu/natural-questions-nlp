@@ -55,7 +55,7 @@ flags.DEFINE_string('nq_jsonl', None,
                     'Path to jsonlines file containing Natural Questions.')
 flags.DEFINE_boolean('gzipped', True, 'Whether the jsonlines are gzipped.')
 flags.DEFINE_enum('dataset', 'train', ['train', 'dev'],
-                  'Whether this is training data or dev data.')
+                  'Whether this is training input or dev input.')
 flags.DEFINE_integer('port', 8080, 'Port to listen on.')
 flags.DEFINE_integer('max_examples', 200,
                      'Max number of examples to load in the browser.')

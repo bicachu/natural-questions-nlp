@@ -12,9 +12,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-r"""Utilities to simplify the canonical NQ data.
+r"""Utilities to simplify the canonical NQ input.
 
-The canonical NQ data contains the HTML of each Wikipedia page along with a
+The canonical NQ input contains the HTML of each Wikipedia page along with a
 sequence of tokens on that page, each of which is indexed into the HTML.
 
 Many users will not want to use the HTML at all, and this file provides
@@ -48,8 +48,8 @@ WARNING: Use `split(" ")` instead of `split()` to avoid complications from
   character depending on your python version.
 
 To avoid complications at test time, we do not provide a simplified version
-of the development data, and there is no simplified version of the hidden test
-set. If you rely on the simplified data, then you must call the
+of the development input, and there is no simplified version of the hidden test
+set. If you rely on the simplified input, then you must call the
 `simplify_nq_example` function below on every example that is passed in at test
 time.
 """

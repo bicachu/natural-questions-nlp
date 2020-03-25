@@ -16,7 +16,7 @@
 
 Example usage:
 
-make_test_data --gold_path=<path-to-gold-data> --output=test.json
+make_test_data --gold_path=<path-to-gold-input> --output=test.json
 
 The logic to generate fake scores is as follows:
 
@@ -37,7 +37,7 @@ from absl import flags
 
 import eval_utils as util
 
-flags.DEFINE_string('gold_path', None, 'Path to gold data.')
+flags.DEFINE_string('gold_path', None, 'Path to gold input.')
 flags.DEFINE_string('output_path', None, 'Path to write JSON.')
 flags.DEFINE_integer('num_threads', 10, 'Number of threads for reading.')
 flags.DEFINE_float('desired_recall', 1.0,
@@ -59,7 +59,7 @@ def main(_):
     gold_has_long_answer = util.gold_has_long_answer(labels)
 
     # We did not put `long_answer` and `yes_no_answer`, and they should be
-    # considered as null when loading from data.
+    # considered as null when loading from input.
 
     pred = {
         'example_id': labels[0].example_id,

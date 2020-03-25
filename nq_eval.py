@@ -105,16 +105,16 @@ import eval_utils as util
 import six
 
 flags.DEFINE_string(
-    'gold_path', None, 'Path to the gzip JSON data. For '
+    'gold_path', r"C:\Users\bicaj\Documents\Projects\Google QA\natural-questions-nlp\sample_data_input\nq-dev-00.jsonl.gz", 'Path to the gzip JSON data. For '
     'multiple files, should be a glob '
     'pattern (e.g. "/path/to/files-*"')
-flags.DEFINE_string('predictions_path', None, 'Path to prediction JSON.')
+flags.DEFINE_string('predictions_path', '../predictions.json', 'Path to prediction JSON.')
 flags.DEFINE_bool(
     'cache_gold_data', False,
     'Whether to cache gold data in Pickle format to speed up '
     'multiple evaluations.')
 flags.DEFINE_integer('num_threads', 10, 'Number of threads for reading.')
-flags.DEFINE_bool('pretty_print', False, 'Whether to pretty print output.')
+flags.DEFINE_bool('pretty_print', True, 'Whether to pretty print output.')
 
 FLAGS = flags.FLAGS
 
@@ -365,7 +365,7 @@ def print_r_at_p_table(answer_stats):
   print(' F1     /  P      /  R')
   print('{: >7.2%} / {: >7.2%} / {: >7.2%}'.format(f1, precision, recall))
   for target, recall, precision, row in pr_table:
-    print('R@P={}: {:.2%} (actual p={:.2%}, score threshold={:.4})'.format(
+    print('R@P={}: {:.2%} (actual p={:.2%}, score threshold={!s:.4})'.format(
         target, recall, precision, row))
 
 
@@ -424,6 +424,7 @@ def main(_):
   else:
     nq_gold_dict = util.read_annotation(
         FLAGS.gold_path, n_threads=FLAGS.num_threads)
+    print(nq_gold_dict)
     if FLAGS.cache_gold_data:
       logging.info('Caching gold data for next time to: %s', format(cache_path))
       pickle.dump(nq_gold_dict, open(cache_path, 'w'))
