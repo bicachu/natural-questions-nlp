@@ -3,7 +3,10 @@ venv/
 .idea/
 .ipynb_checkpoints/
 __pycache__/
-data/
+input/
+output/
 requirements.txt
 .tfrecords
 .ckpt.data
+authentication/
+bert-joint-baseline/

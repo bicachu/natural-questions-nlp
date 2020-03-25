@@ -37,7 +37,7 @@ flags.DEFINE_integer(
 
 FLAGS = flags.FLAGS
 
-# A data structure for storing prediction and annotation.
+# A input structure for storing prediction and annotation.
 # When a example has multiple annotations, multiple NQLabel will be used.
 NQLabel = collections.namedtuple(
     'NQLabel',
