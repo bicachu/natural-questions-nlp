@@ -78,5 +78,9 @@ D. Results for BERTjoint Pre-trained Model
 ![Appendix D.](img/D_Results_Bertjoint_Pre_trained_Model_4.png)
 *Table 2. Short answer evaluation.*
 
+E. Input Data Format
+
+![Appendix E.](img/input_data_format.png)
+
 
 
