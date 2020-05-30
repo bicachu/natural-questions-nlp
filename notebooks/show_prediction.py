@@ -9,14 +9,14 @@ import json
 import numpy as np
 import pandas as pd
 import re
-
+from tqdm import tqdm
 
 class ShowPrediction:
     """Class to store and access input needed for displaying prediction text spans"""
     def __init__(self, jsonl_file):
         self._data = {}
         with open(jsonl_file, 'rb') as f:
-            for line in f.readlines():
+            for line in tqdm(f.readlines()):
                 d = json.loads(line)
                 self._data[int(d['example_id'])] = {
                     'doc_tokens': d['document_tokens'],
