@@ -16,12 +16,10 @@ INPUT_PATH=$1
 OUTPUT_PATH=$2
 
 cd /nq_model
-python3 -m run_nq \
-  --logtostderr \
-  --bert_config_file="/nq_model/model/bert_config.json" \
-  --vocab_file="/nq_model/model/vocab-nq.txt" \
-  --init_checkpoint="/nq_model/model/bert_joint.ckpt" \
-  --output_dir="/tmp" \
-  --do_predict \
-  --predict_file="$INPUT_PATH" \
-  --output_prediction_file="$OUTPUT_PATH"
+python3 -m run_nq_ensemble_modified \
+  --max_seq_length=512 \
+  --doc_stride=256 \
+  --max_contexts=48 \
+  --output_dir="/nq_model/output" \
+  --predict_file="$INPUT_PATH"  \
+  --final_output_prediction_file="$OUTPUT_PATH"
